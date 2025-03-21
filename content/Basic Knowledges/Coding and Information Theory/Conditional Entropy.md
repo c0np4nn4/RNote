@@ -28,9 +28,9 @@ $$
 $$
 \begin{aligned}
 H(Y|X) &= \sum_{x \in \mathcal{X}} p(x) H(Y|X=x) \\
-&= - \sum_{x \in \mathcal{X}} p(x) \sum_{y \in \mathcal{Y}} p(y|x) \log p(y|x) \\
+&= - \sum_{x \in \mathcal{X}} p(x) \sum_{y \in \mathcal{Y}} p(y|x) \log p(y|x)  \;\;(\because X=x\text{일 때, } y \text{ 에 대한 엔트로피 정의}) \;\\
 &= - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x) \cdot p(y|x) \log p(y|x) \\
-&= - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x, y) \log p(y|x) \\
+&= - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x, y) \log p(y|x) \; (\because\text{Bayes' Rule})\\
 &= -E_{p(x, y)} \log p(Y | X)
 \end{aligned}
 $$
@@ -43,8 +43,8 @@ $$
 
 | Y \ X |  1  |  2  |
 | :---: | :-: | :-: |
-|   1   | 1/2 | 1/4 |
-|   2   | 1/8 | 1/8 |
+|   1   | 1/4 | 1/4 |
+|   2   | 1/4 | 1/4 |
 
 </center>
 
@@ -54,6 +54,32 @@ $$
 \begin{aligned}
 H(Y | X) &= p(X=1)H(Y|X=1) + p(X=2)H(Y|X=2) \\
 &= (1/2) \cdot H(Y | X=1) + (1/2) \cdot H(Y|X=2) \\
-&= 
+&= (1/2) \cdot \left\{-\sum_y P(Y|X=1) \log P(Y|X=1) \right\} + (1/2) \cdot \left\{-\sum_y P(Y|X=2) \log P(Y|X=2) \right\} \\
+&= (1/2) \cdot \left\{-\sum_y P(Y=1|X=1)\log P(Y=1|X=1) - \sum_y P(Y=2|X=1)\log P(Y=2|X=1) \right\} \\
+&+ (1/2) \cdot \left\{-\sum_y P(Y=1|X=2)\log P(Y=1|X=2) - \sum_y P(Y=2|X=2)\log P(Y=2|X=2) \right\} \\
+&= \frac{1}{2} \cdot \left\{-(1/4) \log \left(1/4 \right)-(1/4) \log \left(1/4 \right)\right\} \times 2 = \frac{1}{2} \cdot 1 \cdot 2 = 1
+\end{aligned}
+$$
+
+## Example 2
+아래 표에 대하여,
+
+<center>
+
+| Y \ X | 1    | 2    | 3    | 4    |
+| :---: | :--: | :--: | :--: | :--: |
+| 1     | 1/8  | 1/16 | 1/32 | 1/32 |
+| 2     | 1/16 | 1/8  | 1/32 | 1/32 |
+| 3     | 1/16 | 1/16 | 1/16 | 1/16 |
+| 4     | 1/4  | 0    | 0    | 0    |
+
+</center>
+
+조건부 엔트로피 $H(X|Y)$ 를 구하는 식은 아래와 같습니다.
+
+$$
+\begin{aligned}
+H(X|Y) &= \sum_{i=1}^4 p(Y=i) H(X|Y=i) \\
+&= - \sum_x \sum_y p(x, y) \log p(y|x)
 \end{aligned}
 $$
