@@ -1,4 +1,4 @@
-확률 변수(random variable)에 대한 엔트로피는 해당 확률변수의 불확실성(uncertainty)을 측정하는 방법입니다. 다시 말해, 확률 변수를 기술하기 위해 필요한 정보의 평균을 의미합니다.
+확률 변수(random variable)에 대한 엔트로피([[Entropy]])는 해당 확률변수의 불확실성([[Uncertainty]])을 측정하는 방법입니다. 다시 말해, 확률 변수를 기술하기 위해 필요한 정보의 평균을 의미합니다.
 
 상대 엔트로피(Relative entropy)는 쿨백-라이블러 발산(Kullback-Leibler divergence)이라고도 불리며, <u>두 분포 간의 거리를 측정</u>하는 방법 입니다. 아래와 같이 정의할 수 있습니다.
 

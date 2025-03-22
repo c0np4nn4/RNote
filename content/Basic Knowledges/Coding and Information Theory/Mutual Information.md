@@ -19,7 +19,7 @@ $$
 $$
 \begin{aligned}
 I(X;Y) &= \sum_{x, y} p(x, y) \log \frac{p(x, y)}{p(x)p(y)} \\
-&= \sum_{x, y}p(x, y) \log \frac{p(x|y)}{p(x)} \;\; (\because \frac{p(x, y)}{p(y)} = p(x|y)\;\text{ (Bayes' rule)}) \\
+&= \sum_{x, y}p(x, y) \log \frac{p(x|y)}{p(x)} \;\; (\because \frac{p(x, y)}{p(y)} = p(x|y)\;\text{ (조건부 확률)}) \\
 &= -\sum_{x, y} p(x, y) \log p(x) + \sum_{x, y}p(x, y) \log p(x|y) \\
 &= -\sum_{x} p(x) \log p(x) - \left( - \sum_{x, y} p(x, y) \log p(x|y) \right) \\
 &= H(X) - H(X|Y)
