@@ -1,3 +1,8 @@
+---
+tags:
+  - LinearAlgebra
+---
+
 ## Definition
 
 > [!Important] Def.
@@ -35,10 +40,15 @@ where $a_{ij} \in \mathbb{R}, \; \texttt{a}_j \in \mathbb{R}^m, \; \text{ and } 
 ---
 ## Q & A
 
-1. The interval $[0, 1]$ is a set. Is this the vector space?
-ans) It is not the *vector space*. One can easily think that the elements in the set violates the condition of definition (e.g., $0.6 + 0.5 \notin [0, 1]$ and $2 \times 0.7 \notin [0, 1]$)
+> 1. The interval $[0, 1]$ is a set. Is this the vector space?
+ans) 
 
-2. Describe the zero vector (i.e., $\texttt{0}$), for each examples above. 
-	1. For $\mathbb{R}^n$, $\texttt{0} = \begin{bmatrix}0 \\ 0 \\ \vdots \\ 0\end{bmatrix}$
-	2. For $\mathbb{R}^{m \times n}$, $\texttt{0} = \begin{bmatrix}0 & 0 & \cdots & 0 \\ 0 & 0 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 0 \\ \end{bmatrix}$
-	3. For $\mathcal{C}[a, b]$, $\texttt{0} = 0$
+It is not the *vector space*. One can easily think that the elements in the set violates the condition of definition (e.g., $0.6 + 0.5 \notin [0, 1]$ and $2 \times 0.7 \notin [0, 1]$)
+
+> 2. Describe the zero vector (i.e., $\texttt{0}$), for each examples above. 
+
+- For $\mathbb{R}^n$, $\texttt{0} = \begin{bmatrix}0 \\ 0 \\ \vdots \\ 0\end{bmatrix}$
+
+- For $\mathbb{R}^{m \times n}$, $\texttt{0} = \begin{bmatrix}0 & 0 & \cdots & 0 \\ 0 & 0 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 0 \\ \end{bmatrix}$
+
+- For $\mathcal{C}[a, b]$, $\texttt{0} = 0$
